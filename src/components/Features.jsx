@@ -13,7 +13,7 @@ const features = [
     title: 'Live Video',
     description: 'Watch live broadcasts of ongoing incidents.',
     icon: faVideo,
-    video: 'https://videocdn.cdnpk.net/videos/c476b2b1-b443-4d7c-b295-ecf6137ce4a1/horizontal/previews/clear/large.mp4?token=exp=1747669171~hmac=d3ae7b16020ee94f2e45579f725a105c98eade1d66564f4c7731c820597b18e6',
+    video: 'https://cdn.pixabay.com/video/2023/01/28/148301-793718115_tiny.mp4',
   },
   {
     title: 'Safety Tracking',
