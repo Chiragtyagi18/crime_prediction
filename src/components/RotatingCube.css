@@ -1,0 +1,61 @@
+/* Scene setup */
+.scene {
+  perspective: 1000px;
+}
+
+/* 3D Cube animation */
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: spin 10s infinite linear;
+}
+
+/* Pause cube rotation on hover */
+.scene:hover .cube {
+  animation-play-state: paused;
+}
+
+/* Each face of the cube */
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.face-1 { transform: rotateY(0deg) translateZ(128px); }
+.face-2 { transform: rotateY(90deg) translateZ(128px); }
+.face-3 { transform: rotateY(180deg) translateZ(128px); }
+.face-4 { transform: rotateY(-90deg) translateZ(128px); }
+.face-5 { transform: rotateX(90deg) translateZ(128px); }
+.face-6 { transform: rotateX(-90deg) translateZ(128px); }
+
+@keyframes spin {
+  0%   { transform: rotateX(0deg) rotateY(0deg); }
+  100% { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+/* Typing Effect */
+/* Typing Effect (infinite loop) */
+.typing-effect {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid #facc15; /* Tailwind yellow-400 */
+  animation: typing 6s steps(60, end) infinite, blink 0.75s step-end infinite;
+  max-width: 100%;
+}
+
+/* Typing and erasing cycle */
+@keyframes typing {
+  0%, 100% { width: 0 }
+  20%, 80% { width: 100% }
+}
+
+/* Cursor blink */
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: #facc15 }
+}
